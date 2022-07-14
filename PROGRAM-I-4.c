@@ -1,13 +1,25 @@
 #include <stdio.h>
+int checkPowerOf2(unsigned int num)
+{
+    if ((num & (num - 1)) != 0)
+    return 0;
+    return 1;
+}
+
 int main()
 {
-    int n,n1,cmplmntbit;
-    printf("enter a num:\n");
-    scanf("%d", &n);
-    printf("enter a bit to set:\n");
-    scanf("%d", &n1);
-    cmplmntbit = n^(1 << n1);
-    printf("Before complementing the bit %d bit: %d\n", n1, n);
-    printf("After complementing the bit %d bit: %d\n", n1, cmplmntbit);
+    
+    unsigned int num = 0;
+    
+    scanf("%d", &num);
+    
+    if (checkPowerOf2(num))
+        .
+        printf("Given number is power of 2.\n");
+    else
+        
+        printf("Given number is not power of 2.\n");
+
     return 0;
 }
+
